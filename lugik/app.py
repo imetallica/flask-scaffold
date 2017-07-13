@@ -3,7 +3,6 @@ import eventlet
 # Monkeypatch all the things :S
 eventlet.monkey_patch()
 
-
 from flask import Flask
 from flask_socketio import SocketIO
 

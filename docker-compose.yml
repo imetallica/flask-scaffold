@@ -2,13 +2,12 @@ version: '2'
 
 services:
   flask:
-    command: flask run
+    volumes: 
+      - ./lugik:/lugik/:ro
+
+    command: python app.py
     build: ./lugik
 
-    environment:
-      FLASK_APP: app.py
-      FLASK_DEBUG: 1
 
-
-    expose: 
-      - "5000"
+    ports: 
+      - "5000:5000"
