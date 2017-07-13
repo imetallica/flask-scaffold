@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  flask:
+    command: flask run
+    build: ./lugik
+
+    environment:
+      FLASK_APP: app.py
+      FLASK_DEBUG: 1
+
+
+    expose: 
+      - "5000"
